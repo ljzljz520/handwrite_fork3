@@ -1,5 +1,14 @@
 {
   "threshold_value": 200,
+  "vectorization": {
+    "max_dimension": 1000,
+    "max_pixels": 1000000,
+    "min_stroke_design_units": 4,
+    "opttolerance": 0.2,
+    "max_area_error": 0.03,
+    "tolerance_band_units": 6,
+    "validate_font": true
+  },
   "props": {
     "ascent": 800,
     "descent": 200,
