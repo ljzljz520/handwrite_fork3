@@ -605,6 +605,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="convert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.convert--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.load_budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_budget
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -624,6 +652,17 @@
     <span class="md-ellipsis">
       
         Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
       
     </span>
   </a>
@@ -781,6 +820,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="convert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.convert--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.load_budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        load_budget
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -800,6 +867,17 @@
     <span class="md-ellipsis">
       
         Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Returns
       
     </span>
   </a>
@@ -864,153 +942,309 @@
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>handwrite/pngtosvg.py</code></summary>
-                <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PNGtoSVG</span><span class="p">:</span>
+                <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span>
+<span class="normal">563</span>
+<span class="normal">564</span>
+<span class="normal">565</span>
+<span class="normal">566</span>
+<span class="normal">567</span>
+<span class="normal">568</span>
+<span class="normal">569</span>
+<span class="normal">570</span>
+<span class="normal">571</span>
+<span class="normal">572</span>
+<span class="normal">573</span>
+<span class="normal">574</span>
+<span class="normal">575</span>
+<span class="normal">576</span>
+<span class="normal">577</span>
+<span class="normal">578</span>
+<span class="normal">579</span>
+<span class="normal">580</span>
+<span class="normal">581</span>
+<span class="normal">582</span>
+<span class="normal">583</span>
+<span class="normal">584</span>
+<span class="normal">585</span>
+<span class="normal">586</span>
+<span class="normal">587</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PNGtoSVG</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Converter class to convert character PNGs to BMPs and SVGs."""</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Call converters on each .png in the provider directory.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Merge an optional config file/dict's vectorization section."""</span>
+        <span class="n">section</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">section</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"vectorization"</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">elif</span> <span class="n">config</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">section</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"vectorization"</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">budget</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">DEFAULT_VECTORIZATION</span><span class="p">)</span>
+        <span class="n">budget</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">budget</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">budget</span>
 
-<span class="sd">        Walk through the custom directory containing all .png files</span>
-<span class="sd">        from sheettopng and convert them to png -&gt; bmp -&gt; svg.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Call converters on each .png in the provided directory.</span>
+
+<span class="sd">        Walk through the custom directory containing all .png files from</span>
+<span class="sd">        sheettopng and convert them to png -&gt; bmp -&gt; svg.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        directory : str</span>
+<span class="sd">            Directory tree containing the character PNGs.</span>
+<span class="sd">        config : str or dict, optional</span>
+<span class="sd">            Config file path or dict with an optional "vectorization"</span>
+<span class="sd">            section controlling sampling/tracing precision and budgets.</span>
 <span class="sd">        """</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+        <span class="n">budget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_budget</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".png"</span><span class="p">):</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">pngToBmp</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
-                    <span class="c1"># self.trim(root + "/" + f[0:-4] + ".bmp")</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span><span class="p">)</span>
+                    <span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pngToBmp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">budget</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">bmpToSvg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pngToBmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Convert one character PNG to a bilevel BMP without blind resizing.</span>
+
+<span class="sd">        The native crop resolution is kept whenever it fits the resource</span>
+<span class="sd">        budget; a detail-aware downsample is only used as a last resort and</span>
+<span class="sd">        is validated before being accepted.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">            Path to the character PNG.</span>
+<span class="sd">        budget : dict, optional</span>
+<span class="sd">            Merged vectorization budget.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        (str, dict)</span>
+<span class="sd">            Path of the written BMP and a sampling descriptor consumed by</span>
+<span class="sd">            bmpToSvg.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        VectorizationBudgetError</span>
+<span class="sd">            If no budget-allowed sampling resolution preserves the glyph</span>
+<span class="sd">            topology.</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="n">budget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">budget</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">DEFAULT_VECTORIZATION</span><span class="p">)</span>
+
+        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGBA"</span><span class="p">)</span>
+        <span class="n">native_size</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+        <span class="n">mask</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">factor</span> <span class="o">=</span> <span class="n">choose_sample</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
+
+        <span class="n">bilevel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">bmp_path</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span>
+        <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">bilevel</span><span class="p">,</span> <span class="s2">"L"</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">bmp_path</span><span class="p">)</span>
+
+        <span class="n">turdsize</span><span class="p">,</span> <span class="n">opttolerance</span> <span class="o">=</span> <span class="n">_tracing_options</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"width"</span><span class="p">:</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="s2">"height"</span><span class="p">:</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s2">"features"</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span>
+            <span class="s2">"turdsize"</span><span class="p">:</span> <span class="n">turdsize</span><span class="p">,</span>
+            <span class="s2">"opttolerance"</span><span class="p">:</span> <span class="n">opttolerance</span><span class="p">,</span>
+            <span class="s2">"native_width"</span><span class="p">:</span> <span class="n">native_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s2">"native_height"</span><span class="p">:</span> <span class="n">native_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="s2">"sample_factor"</span><span class="p">:</span> <span class="n">factor</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">bmpToSvg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">sample</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Convert .bmp image to .svg using potrace.</span>
 
-<span class="sd">        Converts the passed .bmp file to .svg using the potrace</span>
-<span class="sd">        (http://potrace.sourceforge.net/). Each .bmp is passed as</span>
-<span class="sd">        a parameter to potrace which is called as a subprocess.</span>
+<span class="sd">        When ``sample`` (the descriptor produced by pngToBmp) is given, the</span>
+<span class="sd">        potrace output is normalized into the fixed 1000-unit design space</span>
+<span class="sd">        with an explicit transform and validated for topology preservation.</span>
+<span class="sd">        Without it, plain potrace pass-through behavior is kept.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        path : str</span>
 <span class="sd">            Path to the bmp file to be converted.</span>
+<span class="sd">        sample : dict, optional</span>
+<span class="sd">            Sampling descriptor from pngToBmp.</span>
+<span class="sd">        budget : dict, optional</span>
+<span class="sd">            Merged vectorization budget (unused without ``sample``).</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        PotraceNotFound</span>
 <span class="sd">            Raised if potrace not found in path by shutil.which()</span>
+<span class="sd">        VectorizationBudgetError</span>
+<span class="sd">            If the traced SVG fails topology validation.</span>
 <span class="sd">        """</span>
         <span class="k">if</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">"potrace"</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">PotraceNotFound</span><span class="p">(</span><span class="s2">"Potrace is either not installed or not in path"</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"potrace"</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"svg"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".svg"</span><span class="p">])</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">pngToBmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Convert .bmp image to .svg using potrace.</span>
+        <span class="n">out_svg</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".svg"</span>
 
-<span class="sd">        Converts the passed .bmp file to .svg using the potrace</span>
-<span class="sd">        (http://potrace.sourceforge.net/). Each .bmp is passed as</span>
-<span class="sd">        a parameter to potrace which is called as a subprocess.</span>
+        <span class="k">if</span> <span class="n">sample</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"potrace"</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"svg"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="n">out_svg</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">out_svg</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        path : str</span>
-<span class="sd">            Path to the bmp file to be converted.</span>
-
-<span class="sd">        Raises</span>
-<span class="sd">        ------</span>
-<span class="sd">        PotraceNotFound</span>
-<span class="sd">            Raised if potrace not found in path by shutil.which()</span>
-<span class="sd">        """</span>
-        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGBA"</span><span class="p">)</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
-
-        <span class="c1"># Threshold image to convert each pixel to either black or white</span>
-        <span class="n">threshold</span> <span class="o">=</span> <span class="mi">200</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">pix</span> <span class="ow">in</span> <span class="n">img</span><span class="o">.</span><span class="n">get_flattened_data</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">pix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span> <span class="ow">and</span> <span class="n">pix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span> <span class="ow">and</span> <span class="n">pix</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
-                <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-        <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span><span class="p">)</span>
+        <span class="n">tmp_fd</span><span class="p">,</span> <span class="n">tmp_svg</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkstemp</span><span class="p">(</span>
+            <span class="n">prefix</span><span class="o">=</span><span class="s2">"."</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">,</span>
+            <span class="n">suffix</span><span class="o">=</span><span class="s2">".svg"</span><span class="p">,</span>
+            <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">tmp_fd</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="s2">"potrace"</span><span class="p">,</span>
+                    <span class="n">path</span><span class="p">,</span>
+                    <span class="s2">"-b"</span><span class="p">,</span>
+                    <span class="s2">"svg"</span><span class="p">,</span>
+                    <span class="s2">"-o"</span><span class="p">,</span>
+                    <span class="n">tmp_svg</span><span class="p">,</span>
+                    <span class="s2">"-t"</span><span class="p">,</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">"turdsize"</span><span class="p">]),</span>
+                    <span class="s2">"-O"</span><span class="p">,</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">"opttolerance"</span><span class="p">]),</span>
+                <span class="p">],</span>
+                <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">build_design_svg</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">,</span> <span class="n">out_svg</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out_svg</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">trim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im_path</span><span class="p">):</span>
         <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">im_path</span><span class="p">)</span>
@@ -1043,7 +1277,7 @@
 
 
 <h2 id="handwrite.pngtosvg.PNGtoSVG.bmpToSvg" class="doc doc-heading">
-            <code class=" language-python"><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class=" language-python"><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">sample</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#handwrite.pngtosvg.PNGtoSVG.bmpToSvg" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -1051,60 +1285,145 @@
     <div class="doc doc-contents ">
 
         <p>Convert .bmp image to .svg using potrace.</p>
-<p>Converts the passed .bmp file to .svg using the potrace
-(<a href="http://potrace.sourceforge.net/">http://potrace.sourceforge.net/</a>). Each .bmp is passed as
-a parameter to potrace which is called as a subprocess.</p>
+<p>When <code>sample</code> (the descriptor produced by pngToBmp) is given, the
+potrace output is normalized into the fixed 1000-unit design space
+with an explicit transform and validated for topology preservation.
+Without it, plain potrace pass-through behavior is kept.</p>
 <h4 id="handwrite.pngtosvg.PNGtoSVG.bmpToSvg--parameters">Parameters<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.bmpToSvg--parameters" title="Permanent link">&para;</a></h4>
 <p>path : str
-    Path to the bmp file to be converted.</p>
+    Path to the bmp file to be converted.
+sample : dict, optional
+    Sampling descriptor from pngToBmp.
+budget : dict, optional
+    Merged vectorization budget (unused without <code>sample</code>).</p>
 <h4 id="handwrite.pngtosvg.PNGtoSVG.bmpToSvg--raises">Raises<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.bmpToSvg--raises" title="Permanent link">&para;</a></h4>
 <p>PotraceNotFound
-    Raised if potrace not found in path by shutil.which()</p>
+    Raised if potrace not found in path by shutil.which()
+VectorizationBudgetError
+    If the traced SVG fails topology validation.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>handwrite/pngtosvg.py</code></summary>
-              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bmpToSvg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span>
+<span class="normal">563</span>
+<span class="normal">564</span>
+<span class="normal">565</span>
+<span class="normal">566</span>
+<span class="normal">567</span>
+<span class="normal">568</span>
+<span class="normal">569</span>
+<span class="normal">570</span>
+<span class="normal">571</span>
+<span class="normal">572</span>
+<span class="normal">573</span>
+<span class="normal">574</span>
+<span class="normal">575</span>
+<span class="normal">576</span>
+<span class="normal">577</span>
+<span class="normal">578</span>
+<span class="normal">579</span>
+<span class="normal">580</span>
+<span class="normal">581</span>
+<span class="normal">582</span>
+<span class="normal">583</span>
+<span class="normal">584</span>
+<span class="normal">585</span>
+<span class="normal">586</span>
+<span class="normal">587</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bmpToSvg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">sample</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Convert .bmp image to .svg using potrace.</span>
 
-<span class="sd">    Converts the passed .bmp file to .svg using the potrace</span>
-<span class="sd">    (http://potrace.sourceforge.net/). Each .bmp is passed as</span>
-<span class="sd">    a parameter to potrace which is called as a subprocess.</span>
+<span class="sd">    When ``sample`` (the descriptor produced by pngToBmp) is given, the</span>
+<span class="sd">    potrace output is normalized into the fixed 1000-unit design space</span>
+<span class="sd">    with an explicit transform and validated for topology preservation.</span>
+<span class="sd">    Without it, plain potrace pass-through behavior is kept.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    path : str</span>
 <span class="sd">        Path to the bmp file to be converted.</span>
+<span class="sd">    sample : dict, optional</span>
+<span class="sd">        Sampling descriptor from pngToBmp.</span>
+<span class="sd">    budget : dict, optional</span>
+<span class="sd">        Merged vectorization budget (unused without ``sample``).</span>
 
 <span class="sd">    Raises</span>
 <span class="sd">    ------</span>
 <span class="sd">    PotraceNotFound</span>
 <span class="sd">        Raised if potrace not found in path by shutil.which()</span>
+<span class="sd">    VectorizationBudgetError</span>
+<span class="sd">        If the traced SVG fails topology validation.</span>
 <span class="sd">    """</span>
     <span class="k">if</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">"potrace"</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">raise</span> <span class="n">PotraceNotFound</span><span class="p">(</span><span class="s2">"Potrace is either not installed or not in path"</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"potrace"</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"svg"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".svg"</span><span class="p">])</span>
+
+    <span class="n">out_svg</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".svg"</span>
+
+    <span class="k">if</span> <span class="n">sample</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"potrace"</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"svg"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="n">out_svg</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out_svg</span>
+
+    <span class="n">tmp_fd</span><span class="p">,</span> <span class="n">tmp_svg</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkstemp</span><span class="p">(</span>
+        <span class="n">prefix</span><span class="o">=</span><span class="s2">"."</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">,</span>
+        <span class="n">suffix</span><span class="o">=</span><span class="s2">".svg"</span><span class="p">,</span>
+        <span class="nb">dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">tmp_fd</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="s2">"potrace"</span><span class="p">,</span>
+                <span class="n">path</span><span class="p">,</span>
+                <span class="s2">"-b"</span><span class="p">,</span>
+                <span class="s2">"svg"</span><span class="p">,</span>
+                <span class="s2">"-o"</span><span class="p">,</span>
+                <span class="n">tmp_svg</span><span class="p">,</span>
+                <span class="s2">"-t"</span><span class="p">,</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">"turdsize"</span><span class="p">]),</span>
+                <span class="s2">"-O"</span><span class="p">,</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">"opttolerance"</span><span class="p">]),</span>
+            <span class="p">],</span>
+            <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">build_design_svg</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">,</span> <span class="n">out_svg</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tmp_svg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out_svg</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -1115,45 +1434,108 @@ a parameter to potrace which is called as a subprocess.</p>
 
 
 <h2 id="handwrite.pngtosvg.PNGtoSVG.convert" class="doc doc-heading">
-            <code class=" language-python"><span class="n">convert</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span></code>
+            <code class=" language-python"><span class="n">convert</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#handwrite.pngtosvg.PNGtoSVG.convert" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
     <div class="doc doc-contents ">
 
-        <p>Call converters on each .png in the provider directory.</p>
-<p>Walk through the custom directory containing all .png files
-from sheettopng and convert them to png -&gt; bmp -&gt; svg.</p>
+        <p>Call converters on each .png in the provided directory.</p>
+<p>Walk through the custom directory containing all .png files from
+sheettopng and convert them to png -&gt; bmp -&gt; svg.</p>
+<h4 id="handwrite.pngtosvg.PNGtoSVG.convert--parameters">Parameters<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.convert--parameters" title="Permanent link">&para;</a></h4>
+<p>directory : str
+    Directory tree containing the character PNGs.
+config : str or dict, optional
+    Config file path or dict with an optional "vectorization"
+    section controlling sampling/tracing precision and budgets.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>handwrite/pngtosvg.py</code></summary>
-              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Call converters on each .png in the provider directory.</span>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Call converters on each .png in the provided directory.</span>
 
-<span class="sd">    Walk through the custom directory containing all .png files</span>
-<span class="sd">    from sheettopng and convert them to png -&gt; bmp -&gt; svg.</span>
+<span class="sd">    Walk through the custom directory containing all .png files from</span>
+<span class="sd">    sheettopng and convert them to png -&gt; bmp -&gt; svg.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    directory : str</span>
+<span class="sd">        Directory tree containing the character PNGs.</span>
+<span class="sd">    config : str or dict, optional</span>
+<span class="sd">        Config file path or dict with an optional "vectorization"</span>
+<span class="sd">        section controlling sampling/tracing precision and budgets.</span>
 <span class="sd">    """</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+    <span class="n">budget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_budget</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".png"</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">pngToBmp</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
-                <span class="c1"># self.trim(root + "/" + f[0:-4] + ".bmp")</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">root</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span><span class="p">)</span>
+                <span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pngToBmp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">budget</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bmpToSvg</span><span class="p">(</span><span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="handwrite.pngtosvg.PNGtoSVG.load_budget" class="doc doc-heading">
+            <code class=" language-python"><span class="n">load_budget</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#handwrite.pngtosvg.PNGtoSVG.load_budget" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge an optional config file/dict's vectorization section.</p>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>handwrite/pngtosvg.py</code></summary>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Merge an optional config file/dict's vectorization section."""</span>
+    <span class="n">section</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">section</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"vectorization"</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="k">elif</span> <span class="n">config</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">section</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"vectorization"</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="n">budget</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">DEFAULT_VECTORIZATION</span><span class="p">)</span>
+    <span class="n">budget</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">budget</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">budget</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -1164,84 +1546,131 @@ from sheettopng and convert them to png -&gt; bmp -&gt; svg.</p>
 
 
 <h2 id="handwrite.pngtosvg.PNGtoSVG.pngToBmp" class="doc doc-heading">
-            <code class=" language-python"><span class="n">pngToBmp</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class=" language-python"><span class="n">pngToBmp</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
     <div class="doc doc-contents ">
 
-        <p>Convert .bmp image to .svg using potrace.</p>
-<p>Converts the passed .bmp file to .svg using the potrace
-(<a href="http://potrace.sourceforge.net/">http://potrace.sourceforge.net/</a>). Each .bmp is passed as
-a parameter to potrace which is called as a subprocess.</p>
+        <p>Convert one character PNG to a bilevel BMP without blind resizing.</p>
+<p>The native crop resolution is kept whenever it fits the resource
+budget; a detail-aware downsample is only used as a last resort and
+is validated before being accepted.</p>
 <h4 id="handwrite.pngtosvg.PNGtoSVG.pngToBmp--parameters">Parameters<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp--parameters" title="Permanent link">&para;</a></h4>
 <p>path : str
-    Path to the bmp file to be converted.</p>
+    Path to the character PNG.
+budget : dict, optional
+    Merged vectorization budget.</p>
+<h4 id="handwrite.pngtosvg.PNGtoSVG.pngToBmp--returns">Returns<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp--returns" title="Permanent link">&para;</a></h4>
+<p>(str, dict)
+    Path of the written BMP and a sampling descriptor consumed by
+    bmpToSvg.</p>
 <h4 id="handwrite.pngtosvg.PNGtoSVG.pngToBmp--raises">Raises<a class="headerlink" href="#handwrite.pngtosvg.PNGtoSVG.pngToBmp--raises" title="Permanent link">&para;</a></h4>
-<p>PotraceNotFound
-    Raised if potrace not found in path by shutil.which()</p>
+<p>VectorizationBudgetError
+    If no budget-allowed sampling resolution preserves the glyph
+    topology.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>handwrite/pngtosvg.py</code></summary>
-              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pngToBmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Convert .bmp image to .svg using potrace.</span>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pngToBmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Convert one character PNG to a bilevel BMP without blind resizing.</span>
 
-<span class="sd">    Converts the passed .bmp file to .svg using the potrace</span>
-<span class="sd">    (http://potrace.sourceforge.net/). Each .bmp is passed as</span>
-<span class="sd">    a parameter to potrace which is called as a subprocess.</span>
+<span class="sd">    The native crop resolution is kept whenever it fits the resource</span>
+<span class="sd">    budget; a detail-aware downsample is only used as a last resort and</span>
+<span class="sd">    is validated before being accepted.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    path : str</span>
-<span class="sd">        Path to the bmp file to be converted.</span>
+<span class="sd">        Path to the character PNG.</span>
+<span class="sd">    budget : dict, optional</span>
+<span class="sd">        Merged vectorization budget.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (str, dict)</span>
+<span class="sd">        Path of the written BMP and a sampling descriptor consumed by</span>
+<span class="sd">        bmpToSvg.</span>
 
 <span class="sd">    Raises</span>
 <span class="sd">    ------</span>
-<span class="sd">    PotraceNotFound</span>
-<span class="sd">        Raised if potrace not found in path by shutil.which()</span>
+<span class="sd">    VectorizationBudgetError</span>
+<span class="sd">        If no budget-allowed sampling resolution preserves the glyph</span>
+<span class="sd">        topology.</span>
 <span class="sd">    """</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGBA"</span><span class="p">)</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">budget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">budget</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">DEFAULT_VECTORIZATION</span><span class="p">)</span>
 
-    <span class="c1"># Threshold image to convert each pixel to either black or white</span>
-    <span class="n">threshold</span> <span class="o">=</span> <span class="mi">200</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">pix</span> <span class="ow">in</span> <span class="n">img</span><span class="o">.</span><span class="n">get_flattened_data</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">pix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span> <span class="ow">and</span> <span class="n">pix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span> <span class="ow">and</span> <span class="n">pix</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
-            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">"RGBA"</span><span class="p">)</span>
+    <span class="n">native_size</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+    <span class="n">mask</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">factor</span> <span class="o">=</span> <span class="n">choose_sample</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
+
+    <span class="n">bilevel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="n">bmp_path</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">".bmp"</span>
+    <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">bilevel</span><span class="p">,</span> <span class="s2">"L"</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">bmp_path</span><span class="p">)</span>
+
+    <span class="n">turdsize</span><span class="p">,</span> <span class="n">opttolerance</span> <span class="o">=</span> <span class="n">_tracing_options</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">budget</span><span class="p">)</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"width"</span><span class="p">:</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">"height"</span><span class="p">:</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s2">"features"</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span>
+        <span class="s2">"turdsize"</span><span class="p">:</span> <span class="n">turdsize</span><span class="p">,</span>
+        <span class="s2">"opttolerance"</span><span class="p">:</span> <span class="n">opttolerance</span><span class="p">,</span>
+        <span class="s2">"native_width"</span><span class="p">:</span> <span class="n">native_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s2">"native_height"</span><span class="p">:</span> <span class="n">native_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">"sample_factor"</span><span class="p">:</span> <span class="n">factor</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">bmp_path</span><span class="p">,</span> <span class="n">info</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
